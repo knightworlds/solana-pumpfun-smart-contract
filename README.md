@@ -1,40 +1,61 @@
-# Pump.fun-Smart-Contract
-This is the Rust/Anchor smart contract for Pump.fun.
+# Pumpfun Solana Smart Contract
 
-## Contact
-telegram: @Takhi77
+Welcome to the Pumpfun Solana Smart Contract repository. This repository contains the Rust/Anchor-based smart contract powering the Pumpfun ecosystem. Designed with robust features and innovative logic, this contract is built to manage token minting, liquidity pools, token swaps, and market cap-based launches on Raydium.
+If you have any questions or need support, feel free to reach out, and we can discuss the best way to assist you.
 
-You can contact me here if you have any problems with this repo then we can decide comfortable contact way.
 
-## Features
-It has All features that pump.fun has.
 
-✅ Token Mint
+## Key Features
+The contract includes all the advanced features that define the Pumpfun platform:
 
-✅ Create Pool with 30 Sol of initial virtual Sol reserve
+✅ Token Minting
+Seamlessly mint Pumpfun tokens to kickstart your liquidity pool.
+
+✅ Create Liquidity Pools
+Establish a pool with an initial 30 SOL virtual reserve, creating a strong foundation for token transactions.
 
 ✅ Add Liquidity
+Contribute liquidity to grow the pool and enhance token marketability.
 
-✅ Swap Token with the price of the token (Virtual Sol Reserve / Virtual Token Reserve)
+✅  Token Swapping
+Facilitates token swaps based on a dynamic bonding curve price, calculated as:
+`Price = Virtual SOL Reserve / Virtual Token Reserve.`
 
-✅ Raydium Launch when the Market Cap of the Token (price of the token * 10 ** 9) is reached to $69M
+✅ Raydium Launch Integration
 
-When the Market Cap meet the KOH, the pumpfun launch the real Sol $12K i.e. $24K Liquidity to the Raydium.
-Then the rest of the liquidity will be gained by pumpfun team.
+Automatically launch on Raydium when the token’s market cap (price × 10⁹) reaches $69M. At launch:
+- $12K in SOL ($24K total liquidity) is added to Raydium.
+- Remaining liquidity reserves are allocated to the Pumpfun team for platform growth.
 
-## Bonding Curve Logic
-It is using its own specific bonding curve logic.
+## Unique Bonding Curve Logic
 
-so It is
+The contract uses a custom bonding curve mechanism defined by:
+`X × Y = K²`
+- X: Token price.
+- Y: Token supply in the pool.
+This ensures a dynamic and balanced liquidity model tailored to Pumpfun’s tokenomics.
 
-X * Y = K ** 2
+## Testing and Validation
 
-X : the price of the token
+### The contract includes comprehensive test cases to validate functionality, covering all features except Raydium Launch (which integrates with the ongoing project).
+- Remove Virtual LP and Create Raydium Pool:
 
-Y : the supply of the token in the pool
+### LP Creation Fee
+- A 5% reserve fee applies when creating LPs, ensuring sustainable liquidity pool growth.
+
+## Why Choose Pumpfun?
+
+By leveraging this smart contract, you gain access to a cutting-edge decentralized financial ecosystem tailored for scalability, efficiency, and innovation. It’s the ideal solution for managing tokens and liquidity in a dynamic market environment.
+
+```
+For inquiries, support, or collaboration opportunities, don’t hesitate to reach out. Let’s revolutionize decentralized finance together!
+```
 
 
-It has its own test cases to test all functions except Raydium Launch because it is used my ongoing project.
-You can check the tx to Remove vitual LP and Create Raydium Pool in this smart contract with CPI calls.
-https://explorer.solana.com/tx/4L6MWmtV1ZsT8NFfbtu68ZYyYVbpvZ4iynJhPdZw8jESi28TxwojjTFs88Q5QRdNUb297aWfkKcoYP9Ya8npx8AV?cluster=devnet
-In this smart contract, I set creating LP FEE as 5% of Reserves.
+## 👤 Contact Me
+
+#### Discord: [@knightworlds](https://discordapp.com/users/965772784653443215)
+
+#### Twitter: [@knightworlds127](https://twitter.com/knightworlds127)   
+
+#### Telegram: [@knightworlds](https://t.me/knightworlds)   
